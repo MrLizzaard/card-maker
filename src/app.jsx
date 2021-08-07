@@ -1,8 +1,14 @@
-import React from "react";
-import "./app.css";
+import React, { Component } from "react";
+import { fire } from "../public/firebase";
 
-function App() {
-  return <h1>Hello :)</h1>;
+class App extends Component {
+  constructor() {
+    super();
+    fire();
+  }
+  render() {
+    return <div></div>;
+  }
 }
 
 export default App;
