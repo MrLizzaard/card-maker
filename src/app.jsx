@@ -1,14 +1,8 @@
-import React, { Component } from "react";
-import { fire } from "../public/firebase";
+import React from "react";
+import Login from "./components/login";
 
-class App extends Component {
-  constructor() {
-    super();
-    fire();
-  }
-  render() {
-    return <div></div>;
-  }
-}
+const App = (props) => {
+  return <Login authService={props.authService} />;
+};
 
 export default App;
