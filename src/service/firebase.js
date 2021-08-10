@@ -1,25 +1,13 @@
 import firebase from "firebase";
-import "firebase/auth";
-import * as firebase_data from "./config";
 
-let config = {
-  apiKey: firebase_data.FIREBASE_API,
+const config = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
 
-  authDomain: firebase_data.FIREBASE_DOMAIN,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
 
-  databaseURL: firebase_data.FIREBASE_DATABASE_URL,
+  databaseURL: process.env.REACT_APP_FIREBASE_DB_URL,
 
-  projectId: "business-card-maker-7ff0f",
-
-  storageBucket: "business-card-maker-7ff0f.appspot.com",
-
-  messagingSenderId: firebase_data.FIREBASE_MESSAGE_SENDER,
-
-  appId: firebase_data.FIREBASE_APP_ID,
-
-  measurementId: firebase_data.FIREBASE_MEASURMENT_ID,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
 };
 
-const firebaseApp = firebase.initializeApp(config);
-
-export default firebaseApp;
+firebase.initializeApp(config);
