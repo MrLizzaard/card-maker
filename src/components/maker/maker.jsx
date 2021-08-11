@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import Footer from "../components/footer/footer";
-import Header from "../components/header/header";
+import Footer from "../footer/footer";
+import Header from "../header/header";
+import MakerContainer from "../makerContainer/makerContainer";
 import styles from "./maker.module.css";
 
 const Maker = ({ authService }) => {
@@ -20,6 +21,7 @@ const Maker = ({ authService }) => {
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
+      <MakerContainer />
       <Footer />
     </section>
   );
