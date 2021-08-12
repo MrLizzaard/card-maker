@@ -6,8 +6,8 @@ import styles from "./makerContainer.module.css";
 const MakerContainer = (props) => {
   return (
     <section className={styles.makerContainer}>
-      <CardMakerForm />
-      <CardMakerPreview />
+      <CardMakerForm className={styles.left} />
+      <CardMakerPreview className={styles.right} />
     </section>
   );
 };

@@ -7,3 +7,7 @@
   flex-direction: column;
   background-color: makerWhite;
 }
+
+.container {
+  flex: 1;
+}

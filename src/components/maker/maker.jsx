@@ -21,7 +21,7 @@ const Maker = ({ authService }) => {
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
-      <MakerContainer />
+      <MakerContainer className={styles.container} />
       <Footer />
     </section>
   );
