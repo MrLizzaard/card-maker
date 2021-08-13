@@ -6,7 +6,7 @@ const Preview = ({ data }) => {
   return (
     <section className={styles.preview}>
       <h1 className={styles.title}>Card Preview</h1>
-      <ul>
+      <ul className={styles.cards}>
         {data.map((item) => (
           <Card data={item} />
         ))}

@@ -16,17 +16,30 @@ const Card = ({ data }) => {
   } = data;
   const url = fileURL || DEFAULT_IMAGE;
   return (
-    <li key={id}>
-      <img src={url} alt="profile" />
-      <div>
+    <li className={`${styles.card} ${getStyles(theme)}`} key={id}>
+      <img className={styles.avatar} src={url} alt="profile" />
+      <div className={styles.info}>
         <h1 className={styles.name}>{name}</h1>
-        <p className={styles.description}>{company}</p>
-        <p className={styles.description}>{title}</p>
-        <p className={styles.description}>{email}</p>
-        <p className={styles.description}>{message}</p>
+        <p className={styles.company}>{company}</p>
+        <p className={styles.title}>{title}</p>
+        <p className={styles.email}>{email}</p>
+        <p className={styles.message}>{message}</p>
       </div>
     </li>
   );
 };
+
+function getStyles(theme) {
+  switch (theme) {
+    case "dark":
+      return styles.dark;
+    case "light":
+      return styles.light;
+    case "colorful":
+      return styles.colorful;
+    default:
+      throw new Error(`unknown theme: ${theme}`);
+  }
+}
 
 export default Card;
