@@ -11,7 +11,6 @@ const Card = ({ data }) => {
     title,
     email,
     message,
-    fileName,
     fileURL,
   } = data;
   const url = fileURL || DEFAULT_IMAGE;
