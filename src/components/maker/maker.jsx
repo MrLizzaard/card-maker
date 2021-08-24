@@ -16,7 +16,7 @@ const Maker = ({ authService, FileInput }) => {
       title: "Software Engineer",
       email: "dhk215@naver.com",
       message: "hello!",
-      fileName: "ellie",
+      fileName: null,
       fileURL: null,
     },
     2: {
@@ -27,7 +27,7 @@ const Maker = ({ authService, FileInput }) => {
       title: "Engineer",
       email: "dhk215@naver.com",
       message: "hello!",
-      fileName: "kdh",
+      fileName: null,
       fileURL: null,
     },
     3: {
@@ -38,7 +38,7 @@ const Maker = ({ authService, FileInput }) => {
       title: "Software",
       email: "dhk215@naver.com",
       message: "hello!",
-      fileName: "aaa",
+      fileName: null,
       fileURL: null,
     },
   });
