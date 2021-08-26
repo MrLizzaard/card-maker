@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import ReactDOM from "react-dom";
 import "@fortawesome/fontawesome-free/js/all.js";
 import "./index.module.css";
@@ -11,7 +11,7 @@ import CardRepository from "./service/card_repository";
 const authService = new AuthService();
 const cardRepository = new CardRepository();
 const imageUploader = new ImageUploader();
-const FileInput = (props) => <ImageFileInput {...props} imageUploader={imageUploader} />;
+const FileInput = memo((props) => <ImageFileInput {...props} imageUploader={imageUploader} />);
 
 ReactDOM.render(
   <React.StrictMode>
